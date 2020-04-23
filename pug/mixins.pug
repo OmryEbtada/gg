@@ -1,0 +1,10 @@
+mixin raw(tr)
+    tr: each val, key in tr
+        td(data-attr=key)= val
+
+mixin table(data)
+    table
+        each tr in data
+           +raw(tr) 
+
++raw({x: 1})
